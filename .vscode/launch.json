@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Velocity Limits: Run",
+      "request": "launch",
+      "mainClass": "com.venn.velocity.VelocityLimitsApplication",
+      "cwd": "${workspaceFolder}",
+      "args": "--input=input.txt",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "java",
+      "name": "Velocity Limits: Debug",
+      "request": "launch",
+      "mainClass": "com.venn.velocity.VelocityLimitsApplication",
+      "cwd": "${workspaceFolder}",
+      "args": "--input=input.txt",
+      "console": "integratedTerminal"
+    }
+  ]
+}

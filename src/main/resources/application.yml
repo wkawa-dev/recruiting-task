@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: velocity-limits
+  main:
+    banner-mode: off
+    web-application-type: none
+  datasource:
+    url: jdbc:h2:mem:velocity;DB_CLOSE_DELAY=-1;LOCK_TIMEOUT=10000
+    username: sa
+    password: ""
+  flyway:
+    locations: classpath:db/migration
+  jpa:
+    hibernate:
+      # Schema is owned by Flyway (src/main/resources/db/migration); Hibernate only checks it matches the entities.
+      ddl-auto: validate
+    open-in-view: false
+
+velocity:
+  limits:
+    daily-amount: 5000.00
+    weekly-amount: 20000.00
+    daily-load-count: 3
+
+logging:
+  level:
+    root: WARN
+    com.venn.velocity: INFO
